@@ -1,7 +1,7 @@
 # Hacker Nerds
 A Terminal-based game to learn UNIX-style file paths
 
-![Terminal](tutorial-assets/img/terminal-small.png "macos terminal")
+![Terminal](tutorial-assets/images/terminal-small.png "macos terminal")
 
 ## Open the Terminal
 On the iMac, go to /Applications/Utilities/ and double-click the Terminal application. This opens a "console window", which is how computers were used before Apple launched the Macintosh - with a "Graphic User Interface", aka a Desktop, mouse and icons - back in 1984.
