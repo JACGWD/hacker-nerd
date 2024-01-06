@@ -166,7 +166,7 @@ See the **Links** section above for help.
 8. Still in pico:
     - Change the \<title> "Template File" text to "Hacker Girl".
     - Change the \<h1> "Page Name" text to "Hacker Girl"
-    - Change the "path-to-page.html" text to "hacker-boy/index.html"
+    - Change the "path-to-page.html" text to "subfolder/index.html"
     - Change the picture path to use "hacker-nerd-girl.jpg"
 
 9. Save the file using `control-o` (letter o, not zero). Hit `Enter`.
@@ -181,3 +181,76 @@ Open the hacker-girl.html page in your browser. Check the following:
 - The image is clickable and leads to a missing page.
 
 Your challenge is to make sure the path to the image is correct. You must edit the path so that it **points one level up**, outside of hackers, back to the main level of root.
+
+
+## Level 3
+
+1. Type `pwd` to confirm that you are still inside the root folder:
+
+    `pwd`  `Enter`
+
+    You should see something like this: 
+    `/Users/eric/Documents/root`
+
+2. Change into the hackers folder: `cd hackers` `Enter`
+
+
+3. Type `pwd` to confirm that you are indeed inside the hackers folder:
+
+    `pwd`  `Enter`
+
+    You should see something like this: 
+    `/Users/eric/Documents/root/hackers`
+
+4. Create a folder called "subfolder":
+
+    `mkdir subfolder`
+
+5. Switch into the subfolder:
+
+    `cd subfolder`
+
+6. Type `pwd` to confirm that you are indeed inside the hackers folder:
+
+    `pwd`  `Enter`
+
+    You should see something like this: 
+    `/Users/eric/Documents/root/hackers/subfolder`
+
+### Challenge 3.1
+
+In the previous steps, we used this code to copy the template into root:
+
+ `cp ../hacker-nerd/template.html ./hackers/hacker-girl.html`
+
+ You must now modify that line of code to do the following:
+
+1. Go out of "subfolder", go out of "hackers", go out of "root", go into "hacker-nerd" and copy the template (as "index.html") into the current folder (./index.html).
+
+**Tip 1:** Use `cd ../` followed by `pwd` (as many times as necessary) to move up the folder structure and find out at what level you are. Count the number of times you needed to use `cd` in order to find the "hacker-nerd" folder.
+
+**Tip 2:** Use autocompletion (hitting the `Tab` key) after typing h (for "hacker-nerd") to see if the shell will find the folder. If it can't autocomplete, you probably aren't in the right folder.
+
+
+### Challenge 3.2
+
+Using `pico index.html`, edit the "subfolder/index.html" page:
+
+- Change the \<title>, image tag alt text and \<h1> to "Hacker Nerd Boy".
+- Correct the path to the CSS file.
+- Edit the anchor tag to properly point to "hacker-girl.html".
+- Edit the img tag to properly point to "hacker-girl.html".
+- Underneath the hacker-nerd-boy image, add a text link that points back to home. Make sure to add 'style="text-align: center;"' inside the tag like this:
+
+    `<a href="index.html" style="text-align: center; display: block;">Home</a>`
+
+Remember to save the file using `control-o` (letter o, not zero) and `Enter`. Use `control-x` (lowercase letter x) and `Enter` to quit pico.
+
+
+### Challenge 3.3
+
+Type the following command:
+
+`history > ~/Documents/history.txt`
+
+Show me this file to complete the game. Please use Microsoft VS Code to open the file (so we can see the line numbers.)
